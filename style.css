@@ -1,0 +1,391 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+html {
+    background: #969696;
+    display: flex;
+    min-width: 21cm;
+    min-height: 29.7cm;
+}
+
+body {
+    width: 21cm;
+    height: 29.7cm;
+    margin: auto;
+    background: #fff;
+    position: relative;
+    z-index: -100;
+    font-family: "Open Sans", sans-serif;
+}
+
+#page-layout {
+    padding: 35px;
+    overflow: hidden;
+}
+
+#wrapper-background-hexagram {
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 25%;
+    position: absolute;
+    overflow: hidden;
+    z-index: -10;
+}
+
+#background-hexagram-icon {
+    width: 750px;
+    height: 750px;
+    transform: translateX(-354px) rotate(-120deg);
+    filter: grayscale(1);
+    opacity: 10%;
+}
+
+#name-hexagram-icon {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    width: 60px;
+    height: 60px;
+    align-self: center;
+}
+
+#experience-icon {
+    width: 40px;
+    height: 40px;
+}
+
+#save-pdf-button {
+    position: absolute;
+}
+
+#title-card {
+    display: inline-grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 50px 40px;
+    grid-column-gap: 8px;
+}
+
+#full-name {
+    font-size: 34px;
+    grid-row: 1;
+    grid-column: 2 / -1;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+#job-title {
+    margin-block: 0;
+    grid-row: 2;
+    grid-column: 2 / -1;
+    font-weight: lighter;
+    margin: 0 0 0 4px;
+}
+
+.section {
+    margin: 24px 0 0 10px;
+}
+
+.card {
+    display: inline-flex;
+    align-items: center;
+}
+
+.job-info, .education-info {
+    font-size: 13px;
+}
+
+.job-info .year, .job-info .location, .education-info .location, .education-info .year {
+    font-weight: lighter;
+    color: #989ca1;
+    font-size: 12px;
+}
+
+.job-overview, .education-overview {
+    font-size: 13px;
+}
+
+.job-overview .job-title, .education-overview .education-title {
+}
+
+.job-overview .job-description, .education-overview .education-description {
+    font-weight: lighter;
+    text-align: justify;
+    line-height: 1;
+    color: #989ca1;
+}
+
+.job-overview .job-duration, .education-overview .education-duration {
+    font-weight: lighter;
+    color: #989ca1;
+}
+
+#experience-title {
+    color: #41abc8;
+    margin: auto auto auto 8px;
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+#education-title {
+    color: #41abc8;
+    margin: auto auto auto 8px;
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+#education-icon {
+    width: 40px;
+    height: 40px;
+}
+
+#skill-title {
+    color: #b6206f;
+    margin: auto auto auto 8px;
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+#skill-card {
+}
+
+#skill-icon {
+    width: 40px;
+    height: 40px;
+}
+
+#timeline {
+    margin: 30px 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+
+#timeline .lines {
+    flex: 1 0 25px;
+    align-self: stretch;
+    padding-top: 2px;
+    display: flex;
+}
+
+#timeline .job-info, #timeline .education-info {
+    flex: 0 0 150px;
+    align-self: stretch;
+}
+
+#timeline .job-overview, #timeline .education-overview {
+    flex: 10 10 70%;
+    align-self: stretch;
+}
+
+#timeline .education-info {
+    margin-top: -15px;
+}
+
+#timeline .education-info + .lines {
+    margin-top: -15px;
+}
+
+#timeline .education-overview {
+    margin-top: -15px;
+}
+
+#timeline #education-card {
+    flex: 0 0 200px;
+    align-self: stretch;
+}
+
+#timeline .break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+#timeline .lines .dot {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #d1d6e6;
+    background: #fff;
+    border-radius: 100%;
+}
+
+#timeline .lines .square {
+    position: relative;
+    left: -9px;
+    bottom: -5px;
+    width: 4px;
+    height: 4px;
+    background: #d1d6e6;
+    border-radius: 2px;
+}
+
+#timeline .lines .line {
+    position: relative;
+    height: calc(100% + 9px);
+    top: 14px;
+    width: 2px;
+    background: #d1d6e6;
+    left: -12px;
+}
+
+#timeline #education-card + .lines .line {
+    top: 0;
+    left: 6px;
+    height: calc(100% + 7px);
+}
+
+#experience-card, #education-card {
+    margin-left: -50px;
+    margin-top: -15px;
+}
+
+#skills #languages-label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    flex-basis: 100%;
+}
+
+#skills #languages {
+    margin-left: 50px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+    row-gap: 5px;
+}
+
+
+#skills #languages > .language-info {
+    display: flex;
+    flex: 1 0 50%;
+    align-self: stretch;
+    font-size: 13px;
+    font-weight: lighter;
+    color: #989ca1;
+}
+
+#skills #languages > .language-info > .language {
+    flex: 0 1 100px;
+}
+
+#skills #languages .score {
+    flex: 0 1;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+#skills #languages .score .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+}
+
+#skills #languages .score .dot.empty {
+    background: #d5d7d9;
+}
+
+#skills #languages .score .dot.filled {
+    background: #9293a1;
+}
+
+#personal-skills {
+    margin-left: 60px;
+    width: 50%;
+}
+
+#personal-skills-label {
+    font-size: 16px;
+    margin: 30px 0 10px;
+}
+
+#personal-skills-description {
+    margin: 0;
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+#contacts {
+    font-size: 13px;
+    display: grid;
+    grid-template-areas:
+    "linkedin github"
+    "email email"
+    "phone-1 phone-1"
+    "phone-2 phone-2";
+    column-gap: 20px;
+    width: 30%;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+#contacts a {
+    color: #b5216f;
+}
+
+#contacts #linkedin {
+    grid-area: linkedin;
+    align-self: end;
+    justify-self: end;
+}
+
+#contacts #github {
+    grid-area: github;
+    align-self: start;
+    justify-self: start;
+}
+
+#contacts .email {
+    grid-area: email;
+    align-self: center;
+    justify-self: center;
+}
+
+#contacts .primary-phone {
+    grid-area: phone-1;
+    align-self: center;
+    justify-self: center;
+}
+
+#contacts .secondary-phone {
+    grid-area: phone-2;
+    align-self: center;
+    justify-self: center;
+}
+
+#wrapper-contact-hexagram {
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+}
+
+#contact-hexagram-icon {
+    margin-left: 16%;
+    margin-bottom: -38%;
+    background-image: url(assets/icons/hexagram.svg);
+    background-repeat: no-repeat;
+    box-shadow: -120px -180px 80px 70px #fff inset;
+    width: 400px;
+    height: 400px;
+    opacity: 70%;
+}
+
+@media print {
+    html {
+        -webkit-print-color-adjust: exact;
+        -webkit-filter: opacity(1);
+    }
+}
