@@ -56,7 +56,7 @@ body {
 
 #experience-icon {
     width: 40px;
-    height: 40px;
+    height: 37px;
 }
 
 #save-pdf-button {
@@ -100,7 +100,6 @@ body {
 }
 
 .job-info .year, .job-info .location, .education-info .location, .education-info .year {
-    font-weight: lighter;
     color: #989ca1;
     font-size: 12px;
 }
@@ -113,14 +112,13 @@ body {
 }
 
 .job-overview .job-description, .education-overview .education-description {
-    font-weight: lighter;
+    font-size: 12px;
     text-align: justify;
-    line-height: 1;
     color: #989ca1;
 }
 
 .job-overview .job-duration, .education-overview .education-duration {
-    font-weight: lighter;
+    font-size: 12px;
     color: #989ca1;
 }
 
@@ -155,11 +153,11 @@ body {
 
 #skill-icon {
     width: 40px;
-    height: 40px;
+    height: 32px;
 }
 
 #timeline {
-    margin: 30px 60px;
+    margin: 30px 30px 30px 60px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -247,7 +245,7 @@ body {
 }
 
 #skills #languages-label {
-    margin-bottom: 10px;
+    margin: 10px 0 0;
     font-size: 16px;
     flex-basis: 100%;
 }
@@ -270,7 +268,6 @@ body {
     flex: 1 0 50%;
     align-self: stretch;
     font-size: 13px;
-    font-weight: lighter;
     color: #989ca1;
 }
 
@@ -306,7 +303,7 @@ body {
 
 #personal-skills-label {
     font-size: 16px;
-    margin: 30px 0 10px;
+    margin: 10px 0 6px;
 }
 
 #personal-skills-description {
