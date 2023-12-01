@@ -371,12 +371,6 @@ ul.technical-skills-description > li {
     justify-self: center;
 }
 
-#contacts .secondary-phone {
-    grid-area: phone-2;
-    align-self: center;
-    justify-self: center;
-}
-
 #wrapper-contact-hexagram {
     position: absolute;
     overflow: hidden;
